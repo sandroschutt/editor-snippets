@@ -140,7 +140,7 @@ function EditarProjeto() {
           "projetoSelecionado",
           JSON.stringify(cartao.dataset.id)
         );
-        window.location.href = "editor-snippets/editor-codigo.html";
+        window.location.href = "https://sandroschutt.github.io/editor-snippets/editor-codigo.html";
       });
     });
   });
