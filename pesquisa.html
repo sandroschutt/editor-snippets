@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./public/style/highlight/monokai.css" />
+    <link rel="stylesheet" href="./public/style/main.css" />
+    <link rel="stylesheet" href="./public/style/comunidade.css" />
+    <link rel="stylesheet" href="./public/style/media_queries.css" />
+
+    <title>Alura Dev</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="row d-flex justify-content-between text-light">
+        <div class="col col-lg-2 col-md-2 col align-self-end">
+          <a href="./dashboard.html">
+            <img src="./resources/img/logo.png" alt="Alura Dev" class="logo" />
+          </a>
+        </div>
+        <div class="col col-lg-8 col-md-9 align-self-end">
+          <div class="busca-container">
+            <form action="./pesquisa.html" method="GET" id="form-pesquisa" name="formpesquisa">
+              <input
+                type="text"
+                class="form-control border-0 busca"
+                placeholder="Busque por algo"
+                id="pesquisa"
+              />
+            </form>
+          </div>
+        </div>
+        <div
+          class="col col-lg-2 col-md-1 col-sm-1 align-self-end perfil-col"
+          style="display: inline-block; padding-bottom: 5px"
+        >
+          <a href="./">
+            <div class="perfil-container d-none d-lg-block">
+              <div class="perfil bg-light">
+                <i
+                  class="fa-solid fa-user"
+                  style="color: var(--bg); font-size: 22px; padding: 6px"
+                ></i>
+              </div>
+              <span
+                class="text-light"
+                style="margin-left: 10px; padding-right: 20px"
+                >Nome</span
+              >
+            </div>
+          </a>
+          <div class="sandwich-menu d-lg-none d-lg-block mx-3">
+            <i class="fa-sharp fa-solid fa-bars align-middle"></i>
+            <div class="menu-mobile d-lg-none">
+              <a href="./dashboard.html">
+                <div class="menu-item one">
+                  <div class="menu-editor-codigo item-active">
+                    <i class="fa-sharp fa-solid fa-code"></i>
+                  </div>
+                  <span style="font-weight: 400">Editor de código</span>
+                </div>
+              </a>
+
+              <a href="./comunidade.html">
+                <div class="menu-item two">
+                  <div class="menu-comunidade">
+                    <i class="fa fa-duotone fa-user-group"></i>
+                  </div>
+                  <span>Comunidade</span>
+                </div>
+              </a>
+
+              <a href="./favoritos.html">
+                <div class="menu-item three">
+                  <div class="menu-favoritos">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span>Favoritos</span>
+                </div>
+              </a>
+
+              <hr style="width: 206px; margin: 20px auto; opacity: 0.08" />
+
+              <a href="./">
+                <div class="perfil-container-mobile">
+                  <div id="mobile-perfil" class="perfil bg-light">
+                    <i
+                      class="fa-solid fa-user"
+                      style="color: var(--bg); font-size: 22px; padding: 6px"
+                    ></i>
+                  </div>
+                  <span
+                    id="mobile-nome"
+                    class="text-light"
+                    style="margin-left: 10px; padding-right: 20px"
+                    >Nome</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row d-flex justify-content-between text-light conteudo">
+      <!-- MENU -->
+      <div class="col col-lg-2 d-none d-lg-block">
+        <div class="menu">
+          <p>MENU</p>
+          <a href="./dashboard.html">
+            <div class="menu-item one">
+              <div class="menu-editor-codigo">
+                <i class="fa-sharp fa-solid fa-code"></i>
+              </div>
+              <span>Editor de código</span>
+            </div>
+          </a>
+
+          <a href="./comunidade.html">
+            <div class="menu-item two">
+              <div class="menu-comunidade">
+                <i class="fa fa-duotone fa-user-group"></i>
+              </div>
+              <span>Comunidade</span>
+            </div>
+          </a>
+
+          <a href="./favoritos.html">
+            <div class="menu-item three">
+              <div class="menu-favoritos">
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span>Favoritos</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- RESULTADOS -->
+      <div class="col col-lg-10 col-md-12 col-sm-12 editor-codigo-col">
+        <div class="row codigo"></div>
+      </div>
+    </div>
+
+    <script src="./app/js/carregaUsuario.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="app/js/main.js"></script>
+    <script type="module" src="./app/js/buscaProjetos.js"></script>
+    <script src="./app/js/SandwichMenu.js"></script>
+    <script type="module" src="./app/js/exibeProjetosEncontrados.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  </body>
+</html>

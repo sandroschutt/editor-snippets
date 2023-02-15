@@ -1,0 +1,144 @@
+@media screen and (min-width: 1000px) {
+  .busca-container,
+  .editor-codigo-col {
+    padding: 0 30px;
+  }
+
+  #codigo {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .highlight {
+    margin-bottom: 50px;
+  }
+
+  .novo-projeto-color {
+    height: var(--button-height);
+  }
+
+  .menu-item {
+    margin: 0 2rem 15px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .menu-mobile {
+    left: 500px !important;
+    top: 100px !important;
+  }
+
+  .perfil-container-mobile {
+    margin: 40px 12% !important;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .busca {
+    display: none;
+  }
+
+  .novo-projeto .row {
+    display: block;
+  }
+
+  .menu-item {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  nav,
+  .conteudo {
+    margin: auto 25px;
+  }
+
+  nav {
+    margin: 20px;
+  }
+
+  .logo {
+    width: 125px;
+  }
+
+  .menu-item {
+    font-size: 13px;
+  }
+
+  .fa-code,
+  .fa-user-group,
+  .fa-star {
+    font-size: 15px;
+    margin: 11px;
+    font-weight: bold;
+  }
+
+  .menu-editor-codigo,
+  .menu-comunidade,
+  .menu-favoritos {
+    width: 40px;
+    height: 40px;
+  }
+
+  .highlight {
+    margin-bottom: 50px;
+  }
+
+  #codigo {
+    padding: 0;
+  }
+
+  .editor-codigo-col {
+    padding: 0;
+    margin: 0;
+  }
+
+  .editor-codigo-container {
+    min-height: 302px;
+  }
+
+  button.salvar-projeto {
+    margin: 40px auto;
+  }
+}
+
+.menu-mobile {
+  position: fixed;
+  transform: translateX(200%);
+  transition: transform 0.8s;
+  top: 80px;
+  left: 150px;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: #2d415b;
+  color: white;
+  border-radius: 16px 0 0 16px;
+  list-style: none;
+  padding-top: 2rem;
+  -webkit-transition: transform 0.8s;
+  -moz-transition: transform 0.8s;
+  -ms-transition: transform 0.8s;
+  -o-transition: transform 0.8s;
+  -webkit-border-radius: 16px 0 0 16px;
+  -moz-border-radius: 16px 0 0 16px;
+  -ms-border-radius: 16px 0 0 16px;
+  -o-border-radius: 16px 0 0 16px;
+}
+
+.menu-mobile.show {
+  transform: translateX(0);
+}
+
+.menu-item {
+  display: inline-flex;
+  min-width: 80%;
+}
+
+.perfil-container-mobile {
+  float: none;
+  margin: 40px 15%;
+  font-size: 20px;
+}

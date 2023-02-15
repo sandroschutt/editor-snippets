@@ -1,0 +1,348 @@
+@import url("https://fonts.cdnfonts.com/css/inter");
+@import url("https://fonts.cdnfonts.com/css/roboto-mono");
+
+* {
+  max-width: 1930px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+:root {
+  --bg: #051d3b;
+  --editor-codigo-bg: #141414;
+  --main-font: "Inter", sans-serif;
+  --code-editor-font: "Roboto Mono", sans-serif;
+
+  --input-bg: rgba(255, 255, 255, 0.16);
+  --input-bg-hover: rgba(255, 255, 255, 0.24);
+  --input-text-color: rgba(255, 255, 255, 0.795);
+
+  --item-hover: #5081fba3;
+  --item-active: #5081fb;
+
+  --highlight-bg: #5081fb14;
+  --highlight-bg-hover: #5081fb29;
+  --highlight-active: #5081fb3d;
+
+  --btn-bg: #5081fb;
+  --btn-hover-active: #7ba4fc;
+  --btn-focus: #96b9fd;
+  --button-height: 56px;
+
+  --sandwich-menu-hover: #5081fb14;
+  --sandwich-menu-active: #5081fb29;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+nav,
+.conteudo {
+  margin: 30px 35px 50px;
+}
+
+p,
+input,
+button,
+select,
+textarea {
+  font-family: "Inter", sans-serif;
+  font-family: var(--main-font);
+  font-weight: 300 !important;
+}
+
+p {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.4em;
+}
+
+input,
+textarea,
+select,
+button {
+  background-color: var(--input-bg) !important;
+  border: none !important;
+}
+
+input:hover,
+select:hover {
+  background-color: var(--input-bg-hover) !important;
+}
+
+input,
+input::placeholder,
+textarea,
+select {
+  color: var(--input-text-color) !important;
+}
+
+.logo {
+  width: 125px;
+}
+
+.busca,
+.novo-projeto-nome,
+.novo-projeto-descricao {
+  padding: 10px 20px;
+}
+
+.novo-projeto-descricao {
+  max-height: 80px;
+  margin-bottom: 50px;
+}
+
+.novo-projeto-descricao,
+.novo-projeto-select {
+  color: var(--input-text-color);
+  background-color: var(--input-bg) !important;
+}
+
+.novo-projeto-select {
+  height: var(--button-height);
+  margin-bottom: 20px;
+  appearance: auto;
+}
+
+.novo-projeto-color {
+  padding: 5px;
+  height: 50px;
+
+  border: 1px solid #ffffff !important;
+}
+
+.novo-projeto input {
+  margin-bottom: 20px;
+}
+
+.salvar-projeto {
+  background-color: var(--btn-bg) !important;
+  color: #051d3b;
+  height: var(--button-height);
+  border: none;
+}
+
+.salvar-projeto:hover,
+.salvar-projeto:active {
+  background-color: var(--btn-hover-active) !important;
+}
+
+.salvar-projeto:focus {
+  background-color: var(--btn-focus) !important;
+}
+
+.perfil-container,
+.sandwich-menu {
+  float: right;
+}
+
+.perfil-container:hover {
+  cursor: pointer;
+}
+
+.perfil {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  float: left;
+}
+
+.sandwich-menu {
+  z-index: 100;
+  font-size: 25px;
+  padding: 4px 12px;
+  margin: -3px auto;
+  margin-right: 0 !important;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.sandwich-menu:hover {
+  background-color: var(--sandwich-menu-hover);
+  cursor: pointer;
+}
+
+.sandwich-menu:active {
+  background-color: var(--sandwich-menu-active);
+}
+
+.item-hover {
+  background-color: var(--item-hover) !important; 
+}
+
+.menu-item.one span:hover,
+.menu-item.two span:hover,
+.menu-item.three span:hover {
+  font-weight: 600;
+}
+
+.item-active {
+  background-color: var(--item-active) !important;
+}
+
+.menu-item {
+  display: inline-flex;
+  margin-bottom: 20px;
+
+  min-width: 80%;
+}
+
+.menu-item span {
+  padding: 10px 15px;
+  font-weight: 200;
+}
+
+.menu-item:hover {
+  background-color: #00000044;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.menu-editor-codigo,
+.menu-comunidade,
+.menu-favoritos {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.menu-editor-codigo,
+.menu-comunidade,
+.menu-favoritos {
+  background-color: #5081fb29;
+}
+
+.fa-code,
+.fa-user-group,
+.fa-star {
+  font-size: 15px;
+  margin: 15px;
+  font-weight: bold;
+}
+
+.fa-square-js:hover,
+.fa-css3-alt:hover,
+.fa-html5:hover {
+  color: var(--item-hover)!important;
+}
+
+.fa-trash:hover {
+  color: red;
+}
+
+.editor-codigo-container {
+  /* background-color:#6BD1FF; */
+  min-height: 366px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+
+  padding: 30px;
+}
+
+.editor-codigo {
+  background-color: var(--editor-codigo-bg);
+  min-height: 302px;
+  height: 100%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+
+  font-family: var(--code-editor-font);
+  font-size: 14px;
+  line-height: 18.5px;
+}
+.highlight {
+  margin-top: 30px;
+}
+
+.highlight,
+.exportar-codigo,
+.exportar-imagem {
+  background-color: var(--highlight-bg) !important;
+  color: #ffffff;
+  font-weight: 400;
+  height: var(--button-height);
+}
+
+.exportar-codigo,
+.exportar-imagem {
+  padding: 10px auto !important;
+  margin-bottom: 15px;
+}
+
+.highlight:hover,
+.exportar-codigo:hover,
+.exportar-imagem:hover {
+  background-color: var(--highlight-bg-hover) !important;
+}
+
+.highlight:active,
+.exportar-codigo:active,
+.exportar-imagem:active {
+  border: 4px solid var(--highlight-active) !important;
+  color: #fff;
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+}
+
+.highlight:focus,
+.exportar-codigo:focus,
+.exportar-imagem:focus {
+  background-color: #5081fb3d;
+  color: #fff;
+}
+
+.selecione-extensao {
+  font-weight: 200;
+}
+
+.controles ul {
+  padding: 10px 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.controles ul li {
+  display: inline-block;
+  margin: 1px;
+
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.codigo {
+  padding: 0 15px;
+}
+
+.teste {
+  border: 1px solid red;
+}

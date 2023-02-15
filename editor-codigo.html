@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./public/style/highlight/monokai.css" />
+    <link rel="stylesheet" href="./public/style/main.css" />
+    <link rel="stylesheet" href="./public/style/media_queries.css" />
+
+    <title>Alura Dev</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="row d-flex justify-content-between text-light">
+        <div class="col col-lg-2 col-md-2 col align-self-end">
+          <a href="./dashboard.html">
+            <img src="./resources/img/logo.png" alt="Alura Dev" class="logo" />
+          </a>
+        </div>
+        <div class="col col-lg-8 col-md-9 align-self-end">
+          <div class="busca-container">
+            <form
+              action="./pesquisa.html"
+              method="GET"
+              id="form-pesquisa"
+              name="formpesquisa"
+            >
+              <input
+                type="text"
+                class="form-control border-0 busca"
+                placeholder="Busque por algo"
+                id="pesquisa"
+              />
+            </form>
+          </div>
+        </div>
+        <div
+          class="col col-lg-2 col-md-1 col-sm-1 align-self-end perfil-col"
+          style="display: inline-block; padding-bottom: 5px"
+        >
+          <a href="./">
+            <div class="perfil-container d-none d-lg-block">
+              <div id="mobile-perfil" class="perfil bg-light">
+                <i
+                  class="fa-solid fa-user"
+                  style="color: var(--bg); font-size: 22px; padding: 6px"
+                ></i>
+              </div>
+              <span
+                id="mobile-nome"
+                class="text-light"
+                style="margin-left: 10px; padding-right: 20px"
+                >Nome</span
+              >
+            </div>
+          </a>
+          <div class="sandwich-menu d-lg-none d-lg-block mx-3">
+            <i class="fa-sharp fa-solid fa-bars align-middle"></i>
+            <div class="menu-mobile d-lg-none">
+              <a href="./dashboard.html">
+                <div class="menu-item one">
+                  <div class="menu-editor-codigo">
+                    <i class="fa-sharp fa-solid fa-code"></i>
+                  </div>
+                  <span>Editor de código</span>
+                </div>
+              </a>
+
+              <a href="./comunidade.html">
+                <div class="menu-item two">
+                  <div class="menu-comunidade item-active">
+                    <i class="fa fa-duotone fa-user-group"></i>
+                  </div>
+                  <span style="font-weight: 400">Comunidade</span>
+                </div>
+              </a>
+
+              <a href="./favoritos.html">
+                <div class="menu-item three">
+                  <div class="menu-favoritos">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span>Favoritos</span>
+                </div>
+              </a>
+
+              <hr style="width: 206px; margin: 20px auto; opacity: 0.08" />
+
+              <a href="./">
+                <div class="perfil-container-mobile">
+                  <div class="perfil bg-light">
+                    <i
+                      class="fa-solid fa-user"
+                      style="color: var(--bg); font-size: 22px; padding: 6px"
+                    ></i>
+                  </div>
+                  <span
+                    class="text-light"
+                    style="margin-left: 10px; padding-right: 20px"
+                    >Nome</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row d-flex justify-content-between text-light conteudo">
+      <!-- MENU -->
+      <div class="col col-lg-2 d-none d-lg-block">
+        <div class="menu">
+          <p>MENU</p>
+          <a href="./dashboard.html">
+            <div class="menu-item one">
+              <div class="menu-editor-codigo">
+                <i class="fa-sharp fa-solid fa-code"></i>
+              </div>
+              <span>Editor de código</span>
+            </div>
+          </a>
+
+          <a href="./comunidade.html">
+            <div class="menu-item two">
+              <div class="menu-comunidade">
+                <i class="fa fa-duotone fa-user-group"></i>
+              </div>
+              <span>Comunidade</span>
+            </div>
+          </a>
+
+          <a href="./favoritos.html">
+            <div class="menu-item three">
+              <div class="menu-favoritos">
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span>Favoritos</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- EDITOR DE CÓDIGOS -->
+      <div class="col-lg-8 col-md-12 col-sm-12 editor-codigo-col">
+        <div class="row" id="codigo">
+          <div class="editor-codigo-container">
+            <div class="editor-codigo">
+              <div class="controles">
+                <ul>
+                  <li style="background-color: #ff5f56"></li>
+                  <li style="background-color: #ffbd2e"></li>
+                  <li style="background-color: #27c93f"></li>
+                </ul>
+              </div>
+              <div class="codigo">
+                <code
+                  class="preview"
+                  contenteditable="true"
+                  aria-label="Editor de Código"
+                ></code>
+              </div>
+            </div>
+          </div>
+
+          <button class="form-control highlight">
+            Visualizar com o highlight
+          </button>
+        </div>
+      </div>
+
+      <!-- SEU PROJETO -->
+      <div class="col col-lg-2 col-md-12 col-sm-12 projeto">
+        <div class="novo-projeto">
+          <p>SEU PROJETO</p>
+          <form action="" class="novo-projeto">
+            <input
+              type="text"
+              name=""
+              id="nome-projeto"
+              class="form-control novo-projeto-nome"
+              placeholder="Nome do seu projeto"
+              value=""
+            />
+            <textarea
+              name=""
+              id="descricao-projeto"
+              cols="30"
+              rows="10"
+              class="form-control novo-projeto-descricao"
+              value=""
+              placeholder=""
+            >
+Descrição do seu projeto</textarea
+            >
+
+            <p>PERSONALIZAÇÃO</p>
+            <div class="row" id="">
+              <div class="col col-md-6 col-lg-12">
+                <select
+                  name=""
+                  id="linguagem-projeto"
+                  class="form-control novo-projeto-select"
+                >
+                  <option
+                    style="color: #fff; background-color: #2d415b"
+                    value="javascript"
+                  >
+                    JavaScript
+                  </option>
+                  <option
+                    style="color: #fff; background-color: #2d415b"
+                    value="html"
+                  >
+                    HTML
+                  </option>
+                  <option
+                    style="color: #fff; background-color: #2d415b"
+                    value="css"
+                  >
+                    CSS
+                  </option>
+                </select>
+              </div>
+              <div class="col col-md-6 col-lg-12">
+                <input
+                  type="color"
+                  id="cor-destaque-projeto"
+                  class="form-control novo-projeto-color"
+                  value="#6BD1FF"
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="form-control salvar-projeto">
+              Salvar projeto
+            </button>
+          </form>
+
+          <p style="margin-top: 30px">EXPORTAR COMO:</p>
+          <div class="row">
+            <div class="col">
+              <button
+                class="form-control exportar-codigo"
+                style="font-size: 12px"
+              >
+                <i
+                  class="fa fa-duotone fa-file-code"
+                  style="font-size: 25px"
+                ></i
+                ><br /><span>Arquivo</span>
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="form-control exportar-imagem"
+                id="pre-exportar-imagem"
+                style="font-size: 12px"
+              >
+                <i class="fa fa-solid fa-image" style="font-size: 25px"></i
+                ><br /><span>Imagem</span>
+              </button>
+            </div>
+            <div id="opcoes-imagem" class="d-none">
+              <span class="selecione-extensao">Selecione a extensão:</span>
+              <br />
+              <select
+                name="extensao-imagem"
+                id="extensao-imagem"
+                class="form-control novo-projeto-select"
+              >
+                <option
+                  value="jpeg"
+                  style="color: #fff; background-color: #2d415b"
+                  selected
+                >
+                  JPEG
+                </option>
+                <option
+                  value="png"
+                  style="color: #fff; background-color: #2d415b"
+                >
+                  PNG
+                </option>
+                <option
+                  value="webp"
+                  style="color: #fff; background-color: #2d415b"
+                >
+                  WEBP
+                </option>
+              </select>
+
+              <button class="form-control exportar-imagem" id="exportar-imagem">
+                Exportar imagem
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app/js/carregaUsuario.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="app/js/main.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="./app/js/salvaProjeto.js"></script>
+    <script type="module" src="./app/js/buscaProjetos.js"></script>
+    <script src="./app/js/editarCodigo.js"></script>
+    <script src="./app/js/ExportaCodigo.js"></script>
+    <script src="./app/js/SandwichMenu.js"></script>
+    <script type="module" src="./app/js/ExportaImagem.js"></script>
+
+    <script>
+      let corDestaque = document.querySelector("#cor-destaque-projeto").value;
+      document.querySelector(".editor-codigo-container").style.backgroundColor =
+        corDestaque;
+
+      let hlCodigo = document.querySelector("div.codigo");
+
+      function aplicaHighLight() {
+        const codigo = document.querySelector("code").innerText;
+        let selectCode = document.querySelector(
+          "select.novo-projeto-select"
+        ).value;
+        hlCodigo.innerHTML = `<code class="preview ${selectCode}" contenteditable="true" aria-label="Editor de Código"></code>`;
+        hlCodigo.querySelector("code").textContent = codigo;
+        hljs.highlightElement(hlCodigo.querySelector("code"));
+      }
+
+      document
+        .querySelector("button.highlight")
+        .addEventListener("click", (event) => {
+          aplicaHighLight();
+        });
+    </script>
+  </body>
+</html>

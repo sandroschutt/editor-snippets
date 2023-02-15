@@ -1,0 +1,84 @@
+p,
+hr {
+  font-family: "Sans";
+  font-size: 10px;
+  font-weight: 400 !important;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+p a {
+    color: rgb(92, 149, 255);
+    font-weight: bold;
+}
+
+.perfil-container {
+  float: none;
+}
+
+.perfil {
+  height: 175px;
+  width: 175px;
+  margin: 0 15% 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+#login-nome {
+  margin: 10% 42%;
+  width: 250px;
+}
+
+#login-logo {
+  max-width: 100%;
+}
+
+#login-nome input,
+#login-logo {
+  margin-bottom: 15px;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+}
+
+.btn,
+.btn:hover {
+  color: white;
+}
+
+@media screen and (max-width: 920px) {
+  #login-nome {
+    margin: 40% 35%;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  #login-nome {
+    margin: 35% 33%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #login-nome {
+    margin: 35% 20%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #login-nome {
+    margin: 30% 18%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #login-nome {
+    margin: 30% 17%;
+  }
+}

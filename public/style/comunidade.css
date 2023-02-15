@@ -1,0 +1,85 @@
+.row.codigo {
+  --bs-gutter-x: 1.5rem;
+  padding: 0;
+}
+
+.cartao {
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.card-container {
+  color: white;
+  background-color: #00000036;
+  border-radius: 8px;
+}
+
+.controles ul li {
+  margin: 5px;
+}
+
+.codigo.row {
+  max-width: 100%;
+  display: flex;
+}
+
+.title {
+  font-family: "Inter";
+  font-size: 21px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.descricao {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+
+.card-info {
+  padding: 30px 35px 0;
+}
+
+.social-buttons {
+  padding: 20px 35px 30px;
+}
+
+.favoritar,
+.excluir {
+  padding: 12px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.favoritar:hover,
+.excluir:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+.favoritar:active,
+.excluir:active {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.favoritou i {
+  color: #FFCA28;
+}
+
+.favoritar i,
+.excluir i {
+  font-size: 21px;
+}
+
+@media screen and (max-width: 995px) {
+  .row > * {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
