@@ -131,9 +131,8 @@ let paginaComunidade = window.location.pathname;
 
 if(paginaComunidade == "/editor-snippets/comunidade.html"){
   CriaCard(projetos);
+  EditarProjeto();
 }
-
-EditarProjeto();
 
 function EditarProjeto() {
   $(document).ready(function () {
@@ -144,7 +143,7 @@ function EditarProjeto() {
           "projetoSelecionado",
           JSON.stringify(cartao.dataset.id)
         );
-        window.location.href = "https://sandroschutt.github.io/editor-codigo.html";
+        window.location.href = "https://sandroschutt.github.io/editor-snippets/editor-codigo.html";
       });
     });
   });
