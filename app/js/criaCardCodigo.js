@@ -127,9 +127,11 @@ function CriaCard(projetos) {
   });
 }
 
-if(window.location.href == "https://sandroschutt.github.io/editor-snippets/comunidade.html"){
+if(window.location.pathname == "editor-snippets/comunidade.html"){
   CriaCard(projetos);
   EditarProjeto();
+} else {
+  console.log('não é');
 }
 
 function EditarProjeto() {
