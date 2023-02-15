@@ -132,8 +132,6 @@ let paginaComunidade = window.location.pathname;
 if(paginaComunidade == "/editor-snippets/comunidade.html"){
   CriaCard(projetos);
   EditarProjeto();
-} else {
-  console.log('não é');
 }
 
 function EditarProjeto() {
