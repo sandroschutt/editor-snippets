@@ -127,10 +127,9 @@ function CriaCard(projetos) {
   });
 }
 
-if (window.location.pathname == '/editor-snippets/comunidade.html') {
-  CriaCard(projetos);
-  EditarProjeto();
-}
+
+CriaCard(projetos);
+EditarProjeto();
 
 function EditarProjeto() {
   $(document).ready(function () {
