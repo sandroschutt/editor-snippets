@@ -88,12 +88,12 @@ function CriaCard(projetos) {
         if (favoritos.includes(projetoFavoritado)) {
           favoritos.splice(index, 1);
           localStorage.setItem("projetosFavoritos", JSON.stringify(favoritos));
+          window.location.reload();
         } else {
           favoritos.push(projetoFavoritado);
           favoritos.sort();
           localStorage.setItem("projetosFavoritos", JSON.stringify(favoritos));
           alert("Projeto Favoritado :D");
-          window.location.reload();
         }
       });
     });
