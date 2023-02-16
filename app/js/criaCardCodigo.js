@@ -93,6 +93,7 @@ function CriaCard(projetos) {
           favoritos.sort();
           localStorage.setItem("projetosFavoritos", JSON.stringify(favoritos));
           alert("Projeto Favoritado :D");
+          window.location.reload();
         }
       });
     });
